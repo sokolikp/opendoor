@@ -1,0 +1,15 @@
+{
+  "name": "opendoor",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Paul Sokolik",
+  "license": "MIT",
+  "dependencies": {
+    "babyparse": "^0.4.3",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "lazy": "^1.0.11"
+  }
+}

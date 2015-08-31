@@ -1,0 +1,11 @@
+.DS_Store
+
+# Files that might appear on external disk
+node_modules/
+db/
+
+# Floobits
+.floo
+.floobit
+.floo
+.flooignore
