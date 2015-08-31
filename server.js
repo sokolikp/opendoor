@@ -7,8 +7,8 @@ var fs  = require("fs");
 var Baby = require("babyparse");
 
 var allListings = [];
-var minBed=Number.MAX_VALUE, maxBed=Number.MAX_VALUE, minPrice=Number.MAX_VALUE;
-var maxPrice=0, minBath=0, maxBath=0;
+var minBed=Number.MAX_VALUE, minBath=Number.MAX_VALUE, minPrice=Number.MAX_VALUE;
+var maxBed=0, maxBath=0, maxPrice=0;
 
 Lazy(fs.createReadStream('./listings.csv'))
   .lines
@@ -45,7 +45,9 @@ Lazy(fs.createReadStream('./listings.csv'))
 );
 
 
+
 app.get('/listings', function(req, res) {
+  // console.log('bed:', minBed, maxBed, 'bath:', minBath, maxBath, 'price:', minPrice, maxPrice);
 
   var GeoJSON = {"type": "FeatureCollection", features: []};
   var min_price = req.query.min_price || minPrice;
